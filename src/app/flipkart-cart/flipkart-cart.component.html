@@ -6,7 +6,9 @@
                  <img src="{{data.image}}" alt="">
                 </div>
                 <div class="rating">
-                    <p>{{data.rating.rate}}</p>
+                    <!-- <p>{{data.rating.rate}}</p> -->
+                     <app-ratings [rating]="data.rating.rate"></app-ratings>
+
                 </div>
             </div>
             <div class="bottom">
@@ -16,4 +18,4 @@
             </div>
         </div>
     </div>
-</div>
+</div>*

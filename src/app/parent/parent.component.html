@@ -1,0 +1,10 @@
+<p>parent works!</p>
+<input type="text" [(ngModel)]="ap">
+<h1> b in a parent {{bp}}</h1>
+
+<app-child [ac]="ap" (bEvent)="catch($event)"></app-child>
+
+<br>
+<br>
+<br>
+<textarea></textarea>

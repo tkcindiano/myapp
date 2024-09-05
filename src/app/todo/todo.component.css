@@ -1,0 +1,53 @@
+.parent {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f0f8ff; /* Light background */
+    height: 100%;
+    width: 100%;
+}
+
+.child1, .child2, .child3 {
+    width: 33%;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    height: 70%;
+    display: flex;
+}
+
+/* Add vibrant colors */
+.child1 {
+    background-color: #ff6347; /* Tomato red */
+
+}
+
+.child2 {
+    background-color: #4682b4; /* Steel blue */
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+}
+
+.child3 {
+    background-color: #32cd32; /* Lime green */
+    display: flex;
+    overflow: auto;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .parent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .child1, .child2, .child3 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

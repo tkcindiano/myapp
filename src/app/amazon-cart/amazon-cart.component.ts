@@ -22,6 +22,7 @@ export class AmazonCartComponent {
   public pricess:number=0
   public ratingss:number=0
   public isFreeDelivery: boolean = false;
+data: any;
   
   filter(){
     this.carts=this.totalCarts.filter((cart:any)=>cart.pname.includes(this.term))

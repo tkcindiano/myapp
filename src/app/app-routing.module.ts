@@ -1,7 +1,7 @@
 import { CreateStudentFormComponent } from './create-student-form/create-student-form.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, PreloadingStrategy, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
@@ -30,11 +30,24 @@ import { ViewVehiclesComponent } from './view-vehicles/view-vehicles.component';
 import { ViewBanksComponent } from './view-banks/view-banks.component';
 import { MaterialUiComponent } from './material-ui/material-ui.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { ParentComponent } from './parent/parent.component';
+import { RatingsComponent } from './ratings/ratings.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { CartComponent } from './cart/cart.component';
+import { AboutCompanyComponent } from './about-us/about-company/about-company.component';
+import { TodoComponent } from './todo/todo.component';
+
+
+
+
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
   {path:'login',component:LoginComponent},
-  {path:'dashboard',canActivate:[AuthenticationGuard],  component:DashboardComponent,children:[
+  {path:'dashboard',
+    canActivate:[AuthenticationGuard], 
+     component:DashboardComponent,
+     children:[
     {path:"home",component:HomeComponent},
     {path:"welcome",component:WelcomeComponent},
     {path:"",component:WelcomeComponent},
@@ -63,9 +76,23 @@ const routes: Routes = [
     {path:'edit-vehicle/:id',component:CreateVehiclesComponent},
     {path:'edit-bank-account/:id',component:CreateBankAccountComponent},
     {path:'create-user',component:CreateUserComponent},
-    {path:'create-student-form',component:CreateStudentFormComponent}
+    {path:'create-student-form',component:CreateStudentFormComponent},
+    {path : 'parent', component: ParentComponent},
+    {path : 'ratings', component: RatingsComponent},
+    {path:'sibling',component:Sibling1Component},
+    {path : 'cart', component: CartComponent},
+    {path : 'aboutcompany', component: AboutCompanyComponent},
+     {path:'todo',component:TodoComponent},
+    {
+      path: 'payments', 
+      loadChildren: () => 
+        import('./payments/payments.module').then(m => m.PaymentsModule)
+    },
+  ],
+},
+    
+    
 
-  ]},
  
   //wild card path
   {path:'**',component:PageNotFoundComponent},
@@ -73,7 +100,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{preloadingStrategy:PreloadAllModules})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

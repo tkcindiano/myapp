@@ -1,0 +1,81 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+}
+
+/* Parent container */
+.parent {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Child container */
+.child {
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Cart container */
+.cart {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.cart > div {
+    flex: 1;
+}
+
+/* Individual cart items */
+app-cart1, app-cart2, app-cart3, app-cart4 {
+    display: block;
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+app-cart1 {
+    background-color: #e74c3c;
+}
+
+app-cart2 {
+    background-color: #8e44ad;
+}
+
+app-cart3 {
+    background-color: #f39c12;
+}
+
+app-cart4 {
+    background-color: #27ae60;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cart {
+        flex-direction: column;
+    }
+
+    .cart > div {
+        margin-bottom: 20px;
+    }
+}

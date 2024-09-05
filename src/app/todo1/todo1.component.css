@@ -1,0 +1,79 @@
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #141010;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#submit{
+    background-color: #ff6347;
+}
+.label, .date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.label label, .date label {
+    width: 20%;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.label textarea, .date input {
+    width: 75%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.for-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.for-button button {
+    width: 48%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.for-button button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .label, .date {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .label label, .date label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .label textarea, .date input {
+        width: 100%;
+    }
+
+    .for-button {
+        flex-direction: column;
+    }
+
+    .for-button button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

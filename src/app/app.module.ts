@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
@@ -36,6 +35,26 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { CreateStudentFormComponent } from './create-student-form/create-student-form.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { RatingsComponent } from './ratings/ratings.component';
+import { CartComponent } from './cart/cart.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { Cart1Component } from './cart1/cart1.component';
+import { Cart2Component } from './cart2/cart2.component';
+import { Cart3Component } from './cart3/cart3.component';
+import { Cart4Component } from './cart4/cart4.component';
+import { TextAreaComponent } from './text-area/text-area.component';
+import { AboutUsModule } from './about-us/about-us.module';
+import { PaymentsModule } from './payments/payments.module';
+import { TodoComponent } from './todo/todo.component';
+import { Todo1Component } from './todo1/todo1.component';
+import { Todo2Component } from './todo2/todo2.component';
+import { Todo3Component } from './todo3/todo3.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -69,7 +88,21 @@ import { CreateStudentFormComponent } from './create-student-form/create-student
     ViewBanksComponent,
     CreateUserComponent,
     CreateStudentFormComponent,
- 
+    ParentComponent,
+    ChildComponent,
+    RatingsComponent,
+    CartComponent,
+    Sibling1Component,
+    Sibling2Component,
+     Cart1Component,
+    Cart2Component,
+    Cart3Component,
+    Cart4Component,
+    TextAreaComponent,
+    TodoComponent,
+    Todo1Component,
+    Todo2Component,
+    Todo3Component, 
   ],
   imports: [
     BrowserModule,
@@ -78,7 +111,8 @@ import { CreateStudentFormComponent } from './create-student-form/create-student
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-
+    AboutUsModule,
+    PaymentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

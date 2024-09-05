@@ -1,0 +1,15 @@
+<form [formGroup]="todoData">
+    <div class="label">
+        <label for="">Text:</label>
+        <textarea name="" id="" cols="20" rows="10" formControlName="textData"></textarea>
+    </div>
+    <div class="date">
+        <label for="">Date:</label>
+        <input type="datetime-local" name="" id="" formControlName="dateData">
+        <button id="submit">Submit</button>
+    </div>
+    <div class="for-button">
+        <button (click)="create()">Create</button>
+        <button (click)="reset()">Reset</button>
+    </div>
+</form>
